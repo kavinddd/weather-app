@@ -11,7 +11,7 @@ export default class GeoThailandAPI {
   }
 
   async fetchDataByCityName(cityName) {
-    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName},,${this.countryCode}&appid=${this.openWeatherApiKey}`;
+    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName},,${this.countryCode}&appid=${this.openWeatherApiKey}`;
     const response = await fetch(url, { type: "cors" });
     const data = await response.json();
     this.#data = data[0];

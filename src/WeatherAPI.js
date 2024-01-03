@@ -20,7 +20,7 @@ export default class WeatherAPI {
   }
 
   async fetchDataByLatAndLon(lat, lon) {
-    const url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${this.#apiKey}`;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${this.#apiKey}`;
     const response = await fetch(url, { type: "cors" });
     const data = await response.json();
 
